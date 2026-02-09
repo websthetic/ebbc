@@ -1,0 +1,414 @@
+---
+title: "East Brampton Baptist Church | Fundamental Baptist Church | Brampton, ON"
+description: "Meta description for the page"
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-2041">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">sharing the love of God</span>
+            <h1 class="cs-title">An Independent Fundamental Baptist Church</h1>
+            <p class="cs-text">Welcome to the family. There are no perfect people here, no perfect families, no perfect character and no perfect church BUT we are glad to share to you a perfect SAVIOUR from a perfect Book so that someday you will live a perfect LIFE with Him in a perfect place called HEAVEN.</p>
+            <div class="cs-button-group">
+                <a href="" class="cs-hero-button">Learn More</a>
+                <a href="" class="cs-button-outline">Contact Us</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/ebbc-hero%20(1).jpg">
+        <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/ebbc-hero%20(1).jpg">
+        <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/ebbc-hero%20(1).jpg" alt="meeting" width="1920" height="1200" aria-hidden="true">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-961">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Join Us</span>
+            <h2 class="cs-title">Our Worship Service</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-item-link" href="">
+                    <span class="cs-time-badge">9:45 AM</span>
+                    <img class="cs-icon" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/sunrise-img.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="cs-h3">Sunday Morning Service</h3>
+                    <p class="cs-item-text">
+                        Come join us for our morning service, where we have Sunday school to help us grow spiritually and further our understanding of the Bible. 
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-item-link">
+                    <span class="cs-time-badge">2:00 PM</span>
+                    <img class="cs-icon" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/sun-image.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="cs-h3">Sunday Afternoon Service</h3>
+                    <p class="cs-item-text">
+                        Complete the Sunday with the afternoon service as we gather together, praising God and let us grow closer in our relationship with God.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-item-link">
+                    <span class="cs-time-badge">7:00 PM</span>
+                    <img class="cs-icon" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/bible-img.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
+                    <h3 class="cs-h3">Friday Prayer Meeting</h3>
+                    <p class="cs-item-text">
+                        Become a prayer warrior and join us every Friday as we come together to lift up those in need in prayer.
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2283">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="wedding photoshoot" width="297" height="366">
+            </picture>
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="photograph of a woman" width="405" height="376">
+            </picture>
+            <!--Middle image-->
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/hardhat.png" alt="children's birthday" width="218" height="155">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Who We Are</span>
+                <h2 class="cs-title">About EBBC</h2>
+                <p class="cs-text">
+            East Brampton Baptist Church is an Independent Fundamental Baptist Church sharing the love of God in Brampton, Ontario. Please accept my personal invitation to come and visit with us soon. I look forward to meeting you!</p>
+            </div>
+            <!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the content section gets taller from more content-->
+            <div class="cs-content-images">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                    <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="wedding photoshoot" width="297" height="366">
+                </picture>
+                <picture class="cs-picture cs-picture3">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/holy-bible.svg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/holy-bible.svg">
+                    <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/holy-bible.svg" alt="children's birthday" width="218" height="155">
+                </picture>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">What We Believe</h3>
+                <p class="cs-item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus deleniti quas illo explicabo unde sapiente, doloribus pariatur et inventore quaerat? Lorem 
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">How to Be Saved</h3>
+                <p class="cs-item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus deleniti quas illo explicabo unde sapiente, doloribus pariatur et inventore quaerat? Lorem ipsum dolor, sit amet consectetur adipisicing elit!
+                </p>
+            </li>
+            <!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the cs-card-group gets taller from more content-->
+            <li class="cs-item cs-item-picture">
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                    <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="photograph of a woman" width="405" height="376">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                Scrolling Text                -->
+<!-- ============================================ -->
+
+<section id="scrolling-text">
+    <div class="cs-container">
+        <span class="cs-topper">At East Brampton Baptist Church, We Build Faith Together</span>
+        
+        <!-- First Row - Scrolls Right to Left -->
+        <div class="cs-scroll-wrapper" data-direction="left">
+            <div class="cs-scroll-content">
+                <span class="cs-scroll-item">Bible Teaching</span>
+                <span class="cs-scroll-item">Prayer</span>
+                <span class="cs-scroll-item">Fellowship</span>
+                <span class="cs-scroll-item">Worship</span>
+                <span class="cs-scroll-item">Discipleship</span>
+                <span class="cs-scroll-item">Gospel Truth</span>
+                <span class="cs-scroll-item">Sunday School</span>
+                <span class="cs-scroll-item">Youth Ministry</span>
+                <span class="cs-scroll-item">Outreach</span>
+                <span class="cs-scroll-item">Missions</span>
+            </div>
+        </div>
+
+        <!-- Second Row - Scrolls Left to Right -->
+        <div class="cs-scroll-wrapper" data-direction="right">
+            <div class="cs-scroll-content">
+                <span class="cs-scroll-item">Church Family</span>
+                <span class="cs-scroll-item">Small Groups</span>
+                <span class="cs-scroll-item">Community</span>
+                <span class="cs-scroll-item">Faith Building</span>
+                <span class="cs-scroll-item">Scripture Study</span>
+                <span class="cs-scroll-item">Children's Ministry</span>
+                <span class="cs-scroll-item">Salvation</span>
+                <span class="cs-scroll-item">Grace</span>
+                <span class="cs-scroll-item">Hope</span>
+                <span class="cs-scroll-item">Service</span>
+            </div>
+        </div>
+
+        <!-- Third Row - Scrolls Right to Left -->
+        <div class="cs-scroll-wrapper" data-direction="left">
+            <div class="cs-scroll-content">
+                <span class="cs-scroll-item">Growing in Faith</span>
+                <span class="cs-scroll-item">Building Community</span>
+                <span class="cs-scroll-item">Serving Together</span>
+                <span class="cs-scroll-item">Studying Scripture</span>
+                <span class="cs-scroll-item">Worshiping Christ</span>
+                <span class="cs-scroll-item">Making Disciples</span>
+                <span class="cs-scroll-item">Sharing Hope</span>
+                <span class="cs-scroll-item">Living Gospel Truth</span>
+                <span class="cs-scroll-item">Reaching Others</span>
+                <span class="cs-scroll-item">Loving People</span>
+            </div>
+        </div>
+
+        <a href="" class="cs-button-solid">Visit Us This Sunday</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                     FAQ                      -->
+<!-- ============================================ -->
+
+<section id="faq-2286">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="people outside" width="306" height="360" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="people outside" width="306" height="360" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="person gardening" width="306" height="360" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <source media="(max-width: 600px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <source media="(min-width: 601px)" srcset="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png">
+                <img loading="lazy" decoding="async" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/image-placeholder.png" alt="urban environment in green" width="306" height="360" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">FAQ</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <ul class="cs-faq-group">
+                <!-- Active class added as default -->
+                <li class="cs-faq-item active">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            1. What time is your Sunday worship service?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            2. What do you offer for children on Sunday morning?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            3. Do I have to be a member to attend?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            4. Do I have to belong to your denomination to attend?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+                <li class="cs-faq-item">
+                    <button class="cs-button">
+                        <span class="cs-button-text">
+                            5. Do you have to dress up to attend your worship service?
+                        </span>
+                        <span class="cs-indicator" aria-hidden="true"></span>
+                    </button>
+                    <p class="cs-item-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit convallis nunc neque, bibendum pulvinar vitae commodo velit. Proin diam tortor sed malesuada nunc, habitant. Dignissim ipsum porta enim, magna urna, quam. 
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-52">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">A Place To Call Home</span>
+            <h2 class="cs-title">We all need a church family, and you're more than welcome here.</h2>
+            <a href="" class="cs-button-solid">Join Us This Sunday!</a>
+        </div>
+    </div>
+</section>
+                                
+                               
+<!-- GSAP Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- Parallax Script -->
+<script>
+// GSAP Parallax Effect for Hero Section
+gsap.registerPlugin(ScrollTrigger);
+
+// Parallax effect on background image
+gsap.to('#hero-2041 .cs-background img', {
+    yPercent: 30,
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '#hero-2041',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true
+    }
+});
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const scrollWrappers = document.querySelectorAll('.cs-scroll-wrapper');
+    
+    scrollWrappers.forEach(wrapper => {
+        const content = wrapper.querySelector('.cs-scroll-content');
+        const direction = wrapper.getAttribute('data-direction');
+        
+        // Clone the content for seamless loop
+        const clone = content.cloneNode(true);
+        wrapper.appendChild(clone);
+        
+        // Get the width of the content
+        const contentWidth = content.offsetWidth;
+        
+        // Set animation direction and duration
+        const duration = 80; // Adjust speed here (lower = faster)
+        const xStart = direction === 'left' ? 0 : -contentWidth;
+        const xEnd = direction === 'left' ? -contentWidth : 0;
+        
+        // Create GSAP timeline
+        gsap.fromTo([content, clone], 
+            { x: xStart },
+            {
+                x: xEnd,
+                duration: duration,
+                ease: 'none',
+                repeat: -1,
+                modifiers: {
+                    x: gsap.utils.unitize(x => parseFloat(x) % contentWidth)
+                }
+            }
+        );
+    });
+});
+</script>
+
+                                
+{% endblock %}

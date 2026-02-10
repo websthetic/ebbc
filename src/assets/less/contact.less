@@ -14,6 +14,7 @@
         z-index: 1;
 
         .cs-container {
+            padding-top: 64px;
             width: 100%;
             /* changes to 1280px at desktop */
             max-width: (580/16rem);
@@ -96,31 +97,38 @@
         }
 
         .cs-map {
-            width: 100%;
-            max-width: (630/16rem);
-            height: (400/16rem);
-            position: relative;
-            z-index: 1;
-            display: block;
-        }
+    width: 100%;
+    max-width: (630/16rem);
+   aspect-ratio: 1 / 1;
+    position: relative;
+    z-index: 1;
+    display: block;
+    border-radius: 24px;
+    
+    overflow: hidden;
+}
 
-        .cs-iframe-wrapper {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            /* 40px - 56px */
-            bottom: clamp(2.5rem, 5vw, 3.5rem);
+.cs-iframe-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 40px - 56px */
+    bottom: clamp(2.5rem, 5vw, 3.5rem);
+    border-radius: 8px; /* Add this */
+    overflow: hidden; /* Add this */
 
-            iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-        }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 24px; /* Add this */
+        border: 3px solid var(--primary);
+    }
+}
 
         .cs-box {
             width: 90%;
@@ -281,7 +289,8 @@
         .cs-map {
             max-width: (630/16rem);
             height: auto;
-            order: -1;
+            /* Remove or comment out this line: */
+            /* order: -1; */
         }
     }
 }

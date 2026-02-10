@@ -1,19 +1,181 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// PAGE STYLES
-// Interior pages have their own stylesheet for styles that only exist on
-// that page. Any styles shared between pages, including repeated sections,
-// should go into root.less
-// ─────────────────────────────────────────────────────────────────────────────
-
 /*-- -------------------------- -->
-<---          Gallery           -->
+<---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #gallery-48 {
+    #sbsr-1363 {
         padding: var(--sectionPadding);
+        background-color: var(--bodyTextColorWhite);
         position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: clamp(3rem, 6vw, 4rem);
+            padding-top: 48px;
+        }
+
+        .cs-content {
+            text-align: left;
+            width: 100%;
+            max-width: (630/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cs-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2em;
+            font-weight: 400;
+            max-width: 20ch;
+            margin: 0 0 1rem 0;
+            color: var(--headerColor);
+        }
+
+        .cs-text {
+            font-size: 1.125rem;
+            line-height: 1.6em;
+            margin: 0 0 2rem 0;
+            color: #5a5a5a;
+        }
+
+        .cs-image-group {
+            width: 100%;
+            max-width: (586/16rem);
+            aspect-ratio: 1 / 1;
+            border-radius: (24/16rem);
+            overflow: hidden;
+            position: relative;
+            
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbsr-1363 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: clamp(3rem, 6vw, 5rem);
+        }
+
+        .cs-content {
+            flex: 1;
+            max-width: (540/16rem);
+        }
+
+        .cs-image-group {
+            flex: 0 0 auto;
+            aspect-ratio: 1 / 1;
+            width: (600/16rem);
+            max-width: (600/16rem);
+            order: 2;
+        }
+    }
+}
+
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+    #sbsr-1363 {
+        .cs-container {
+            max-width: (1400/16rem);
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       Quote Section        -->
+<--- -------------------------- -*/
+
+#quote-1400 {
+    padding: var(--sectionPadding);
+    background-color: #f7f7f7;
+    position: relative;
+}
+
+#quote-1400 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote-1400 .cs-quote-wrapper {
+    text-align: center;
+    max-width: 50rem;
+}
+
+#quote-1400 .cs-quote-icon {
+    font-size: 3rem;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+#quote-1400 .cs-quote {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-family: 'Spectral';
+    line-height: 1.4;
+    font-weight: 400;
+    margin: 0 0 2rem 0;
+    color: var(--primary);
+}
+
+#quote-1400 .cs-reference {
+    font-size: 1.125rem;
+    color: var(--secondary);
+    font-style: normal;
+    display: block;
+}
+
+@media only screen and (min-width: 48rem) {
+    #quote-1400 .cs-quote-icon {
+        font-size: 4rem;
+    }
+}
+
+/*-- -------------------------- -->
+<---       What We Believe       -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #beliefs-1400 {
+        padding: var(--sectionPadding);
+        background-color: var(--bodyTextColorWhite);
+        position: relative;
+        overflow: hidden;
 
         .cs-container {
             width: 100%;
@@ -22,149 +184,381 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* 48px - 64px */
-            gap: clamp(3rem, 6vw, 4rem);
+            gap: clamp(3rem, 6vw, 5rem);
         }
 
         .cs-content {
             text-align: center;
             width: 100%;
+            max-width: (800/16rem);
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .cs-image-group {
-            /* used rem so it doesn't scale with the font size of on parent */
-            font-size: ~"min(1.1vw, 1em)";
+        .cs-topper {
+            font-size: (14/16rem);
+            line-height: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            color: #767676;
+            margin-bottom: (8/16rem);
+            display: block;
+        }
+
+        .cs-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 400;
+            line-height: 1.2em;
+            text-align: inherit;
+            max-width: 25ch;
+            margin: 0 0 (16/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-text {
+            font-size: (18/16rem);
+            line-height: 1.6em;
+            text-align: inherit;
             width: 100%;
-            padding: 0;
+            max-width: (650/16rem);
             margin: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
+            color: #5a5a5a;
         }
 
-        .cs-row {
+        .cs-timeline {
+    width: 100%;
+    max-width: 100%;  // Uses full container width
+    position: relative;
+    
+}
+
+        // Gray background line wrapper
+        .cs-gray-line {
+    position: absolute;
+    left: (29/16rem);
+    
+    
+    width: (4/16rem);
+    background-color: #e8e8e8;
+    border-radius: (2/16rem);
+    z-index: 0;
+}
+
+    .cs-progress-line {
+    position: absolute;
+    left: (29/16rem);
+    width: (4/16rem);
+    height: 0;
+    background-color: var(--secondary);
+    border-radius: (2/16rem);
+    z-index: 1;
+    opacity: 0; // Hidden initially
+    transition: opacity 0.3s ease;
+}
+
+        .cs-timeline-item {
+            display: flex;
+            gap: (32/16rem);
+            margin-bottom: (60/16rem);
+            position: relative;
+            opacity: 0;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .cs-timeline-number {
+    width: (60/16rem);
+    height: (60/16rem);
+    flex-shrink: 0;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    // Remove this line: transform: scale(0);
+    transition: background-color 0.4s ease;
+
+            span {
+                font-size: (24/16rem);
+                font-family: 'Spectral';
+                font-weight: 700;
+                color: #fff;
+            }
+
+            &.active {
+                background-color: var(--secondary);
+            }
+        }
+
+        .cs-timeline-card {
+            flex: 1;
+            background-color: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: (16/16rem);
+            padding: (32/16rem);
+            transform: translateX(30px);
+        }
+
+        .cs-card-title {
+            font-size: (24/16rem);
+            font-family: 'Spectral';
+            line-height: 1.3em;
+            font-weight: 600;
+            margin: 0 0 (12/16rem) 0;
+            color: var(--headerColor);
+        }
+
+        .cs-card-text {
+            font-size: (16/16rem);
+            line-height: 1.6em;
+            margin: 0;
+            color: #5a5a5a;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #beliefs-1400 {
+        .cs-gray-line {
+            left: (39/16rem);
+        }
+
+        .cs-progress-line {
+            left: (39/16rem);
+        }
+
+        .cs-timeline-number {
+            width: (80/16rem);
+            height: (80/16rem);
+
+            span {
+                font-size: (32/16rem);
+            }
+        }
+
+        .cs-timeline-card {
+            padding: (40/16rem);
+        }
+
+        .cs-card-title {
+            font-size: (28/16rem);
+        }
+
+        .cs-card-text {
+            font-size: (18/16rem);
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #faq-1108 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at desktop */
+            max-width: (584/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 32px - 48px */
+            gap: clamp(2rem, 6vw, 3rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            /* centers content horizontally, set to flex-start to left align */
             align-items: center;
-            /* 8px - 20px */
-            gap: clamp(0.5rem, 2vw, 1.25rem);
+        }
+
+        .cs-title {
+            /* 32px - 48px */
+            margin: 0 0 clamp(2rem, 5vw, 3rem);
+            color: var(--headerColor);
         }
 
         .cs-picture {
             width: 100%;
-            position: relative;
+            /* 360px - 400px */
+            height: clamp(22.5rem, 54vw, 25rem);
             display: block;
-            border-radius: (8/16rem);
-            overflow: hidden;
+            position: relative;
+            border-radius: 8px;
 
             img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
                 width: 100%;
-                object-fit: cover;
-            }
-        }
-
-        .cs-row-1 {
-            .cs-picture-1 {
-                height: (567/16em);
-            }
-
-            .cs-picture-2 {
-                height: (629/16em);
-            }
-
-            .cs-picture-3 {
-                height: (512/16em);
-            }
-        }
-
-        .cs-row-2 {
-            .cs-picture-1 {
-                height: (492/16em);
-            }
-
-            .cs-picture-2 {
-                height: (517/16em);
-            }
-
-            .cs-picture-3 {
-                height: (629/16em);
-            }
-        }
-
-        .cs-row-3 {
-            .cs-picture-1 {
-                height: (625/16em);
-            }
-
-            .cs-picture-2 {
-                height: (452/16em);
-            }
-
-            .cs-picture-3 {
-                height: (629/16em);
-            }
-        }
-
-        .cs-button-solid {
-            font-size: (16/16rem);
-            /* 46px - 56px */
-            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-            text-decoration: none;
-            font-weight: 700;
-            text-align: center;
-            margin: 0;
-            color: #fff;
-            min-width: (150/16rem);
-            padding: 0 (24/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
-            position: relative;
-            z-index: 1;
-            /* prevents padding from adding to the width */
-            box-sizing: border-box;
-
-            &:before {
-                content: "";
-                position: absolute;
                 height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
-                left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
+                object-fit: cover;
+                border-radius: 8px;
             }
+        }
 
-            &:hover {
-                &:before {
-                    width: 100%;
+        .cs-faq-group {
+            width: 100%;
+            max-width: (650/16rem);
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cs-faq-item {
+            list-style: none;
+            width: 100%;
+            border-bottom: 1px solid #e8e8e8;
+            transition: border-bottom 0.3s;
+
+            &.active {
+                border-bottom: 4px solid var(--primary);
+                .cs-button {
+                    color: var(--primary);
+                    .cs-indicator {
+                        &:before {
+                            transform: translate(-50%, -50%) rotate(360deg);
+                        }
+
+                        &:after {
+                            transform: translate(-50%, -50%) rotate(0deg);
+                        }
+                    }
+                }
+                .cs-item-p {
+                    height: auto;
+                    /* 20px - 24px bottom */
+                    padding: 0 0 clamp(1rem, 2vw, 1.5rem) 0;
+                    opacity: 1;
                 }
             }
         }
-    }
-}
 
-/* Dark mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #gallery-48 {
-            .cs-title {
-                color: var(--bodyTextColorWhite);
+        .cs-button {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            line-height: 1.2em;
+            text-align: left;
+            font-weight: bold;
+            /* 20px - 24px */
+            padding: clamp(1.25rem, 2vw, 1.5rem) 0;
+            border: none;
+            background: transparent;
+            color: var(--headerColor);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            transition:
+                background-color 0.3s,
+                color 0.3s;
+
+            &:hover {
+                cursor: pointer;
             }
+
+            .cs-indicator {
+                width: (24/16rem);
+                height: (24/16rem);
+                position: relative;
+                z-index: 1;
+
+                &:before {
+                    /* left line */
+                    content: '';
+                    width: (12/16rem);
+                    height: (2/16rem);
+                    background-color: #585B5D;
+                    opacity: 1;
+                    border-radius: 2px;
+                    position: absolute;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: transform .5s;
+                }
+    
+                &:after {
+                    /* right line */
+                    content: '';
+                    width: (12/16rem);
+                    height: (2/16rem);
+                    background-color: #585B5D;
+                    opacity: 1;
+                    border-radius: 2px;
+                    position: absolute;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) rotate(90deg);
+                    transition: transform .5s;
+                }
+            }
+        }
+
+        .cs-button-text {
+            width: 90%;
+            display: block;
+            font-family: 'Spectral';
+        }
+
+        .cs-item-p {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            width: 90%;
+            max-width: (541/16rem);
+            height: 0;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            color: var(--bodyTextColor);
+            /* clips the text so it doesn't show up */
+            overflow: hidden;
+            transition:
+                opacity 0.3s,
+                padding-bottom 0.3s;
         }
     }
 }
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #faq-1108 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-content {
+            width: 40%;
+            text-align: left;
+            align-items: flex-start;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+    }
+}
+
+                                

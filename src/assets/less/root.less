@@ -471,11 +471,12 @@ html {
             width: (56/16rem);
             height: (56/16rem);
             margin: 0 0 0 auto;
-            background-color: #484848;
+            background-color: var(--primary);
             border: none;
             display: flex;
             justify-content: center;
             align-items: center;
+            border-radius: 8px;
         }
 
         .cs-active {
@@ -650,6 +651,10 @@ html {
         }
 
         .cs-button-solid {
+            display: none;
+        }
+
+        .cs-button-outline {
             display: none;
         }
     }

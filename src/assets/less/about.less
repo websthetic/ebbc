@@ -1,201 +1,112 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// PAGE STYLES
-// Interior pages have their own stylesheet for styles that only exist on
-// that page. Any styles shared between pages, including repeated sections,
-// should go into root.less
-// ─────────────────────────────────────────────────────────────────────────────
-
 /*-- -------------------------- -->
-<---       Side By Side         -->
+<---   Side By Side Reverse     -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #RPsbs-313 {
+    #sbsr-1363 {
         padding: var(--sectionPadding);
+        background-color: var(--bodyTextColorWhite);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
 
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
+            max-width: (584/16rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
-            /* 48px - 64px */
             gap: clamp(3rem, 6vw, 4rem);
+            padding-top: 48px;
         }
 
         .cs-content {
-            /* set text align to left if content needs to be left aligned */
             text-align: left;
             width: 100%;
-            max-width: (542/16rem);
+            max-width: (630/16rem);
             display: flex;
             flex-direction: column;
-            /* centers content horizontally, set to flex-start to left align */
             align-items: flex-start;
         }
 
-        .cs-text {
-            margin-bottom: (16/16rem);
-            &:last-of-type {
-                margin-bottom: (32/16rem);
-            }
-        }
-
-        .cs-quote {
-            margin: 0 0 (32/16rem) 0;
-            /* 16px - 32px */
-            padding: clamp(1rem, 3vw, 2rem);
-            background-color: #f7f7f7;
-            border-radius: (16/16rem);
-            position: relative;
-        }
-
-        .cs-quote-text {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1.5vw, 1rem);
-            line-height: 1.5em;
-            margin: 0 0 (16/16rem);
-            color: #767676;
-            display: block;
-        }
-
-        .cs-name {
-            font-size: (16/16rem);
+        .cs-title {
+            font-size: clamp(2rem, 4vw, 3rem);
             line-height: 1.2em;
-            text-transform: uppercase;
-            font-weight: bold;
-            margin: 0 0 (4/16rem);
+            font-weight: 400;
+            max-width: 20ch;
+            margin: 0 0 1rem 0;
             color: var(--headerColor);
-            display: block;
         }
 
-        .cs-job {
-            font-size: (14/16rem);
-            line-height: 1.5em;
-            color: #767676;
-            display: block;
-        }
-
-        .cs-quote-icon {
-            /* 60px - 136px */
-            width: clamp(3.75rem, 10vw, 8.5rem);
-            height: auto;
-            position: absolute;
-            bottom: (0/16rem);
-            /* 16px - 32px */
-            right: clamp(1rem, 4vw, 2rem);
+        .cs-text {
+            font-size: 1.125rem;
+            line-height: 1.6em;
+            margin: 0 0 2rem 0;
+            color: #5a5a5a;
         }
 
         .cs-image-group {
-            /* scaling the font size with the view width */
-            font-size: ~"min(2.31vw, .7em)";
-            /* using ems so we can use font size to scale the whole section */
-            width: (631/16em);
-            height: (636/16em);
+            width: 100%;
+            max-width: (586/16rem);
+            aspect-ratio: 1 / 1;
+            border-radius: (24/16rem);
+            overflow: hidden;
             position: relative;
+            
         }
 
-        .cs-picture {
-            border-radius: (24/16em);
-            /* clips img tag corners */
-            overflow: hidden;
-            position: absolute;
+        .cs-background {
+            width: 100%;
+            height: 100%;
             display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
 
             img {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
                 width: 100%;
-                /* makes image act like a background image */
+                height: 100%;
                 object-fit: cover;
+                object-position: center;
+                display: block;
             }
-        }
-
-        .cs-picture1 {
-            width: (522/16em);
-            height: (581/16em);
-            left: 0;
-            top: 0;
-        }
-
-        .cs-picture2 {
-            width: (414/16em);
-            height: (400/16em);
-            background-color: #fff;
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 40px;
-            /* 6px - 12px */
-            border: clamp(0.375em, 1.5vw, 0.75em) solid #fff;
-            right: 0;
-            bottom: 0;
         }
     }
 }
 
-/* Desktop - 1024px */
+/* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #RPsbs-313 {
+    #sbsr-1363 {
         .cs-container {
-            flex-flow: row;
+            max-width: (1280/16rem);
+            flex-direction: row;
             justify-content: space-between;
-            gap: (52/16rem);
-        }
-
-        .cs-image-group {
-            font-size: ~"min(1.2vw, 1em)";
-            flex: none;
+            align-items: center;
+            gap: clamp(3rem, 6vw, 5rem);
         }
 
         .cs-content {
-            margin: 0;
+            flex: 1;
+            max-width: (540/16rem);
+        }
+
+        .cs-image-group {
+            flex: 0 0 auto;
+            aspect-ratio: 1 / 1;
+            width: (600/16rem);
+            max-width: (600/16rem);
+            order: 2;
         }
     }
 }
 
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-    body.dark-mode {
-        #RPsbs-313 {
-            .cs-image-group {
-                &:before,
-                &:after {
-                    background: var(--accent);
-                }
-            }
-
-            .cs-picture2 {
-                background-color: var(--dark);
-                /* 6px - 12px */
-                border: clamp(0.375em, 1.5vw, 0.75em) solid var(--dark);
-            }
-
-            .cs-topper {
-                color: var(--primaryLight);
-            }
-
-            .cs-title,
-            .cs-text,
-            .cs-h3,
-            .cs-quote-text,
-            .cs-name {
-                color: var(--bodyTextColorWhite);
-            }
-
-            .cs-quote {
-                background-color: var(--accent);
-            }
-
-            .cs-job {
-                color: var(--bodyTextColorWhite);
-                opacity: 0.8;
-            }
-
-            .cs-quote-icon {
-                opacity: 0.2;
-            }
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+    #sbsr-1363 {
+        .cs-container {
+            max-width: (1400/16rem);
         }
     }
 }

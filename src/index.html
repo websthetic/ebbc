@@ -460,6 +460,8 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 // GSAP Parallax Effect for Hero Section
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 // Parallax effect on background image
 gsap.to('#hero-2041 .cs-background img', {
     yPercent: 30,
@@ -507,6 +509,143 @@ gsap.to('#hero-2041 .cs-background img', {
             }
         );
     });
+});
+</script>
+
+<script>
+// Section Animations
+gsap.registerPlugin(ScrollTrigger);
+
+// Services Section - Cards stagger up
+gsap.from('#services-961 .cs-item', {
+    scrollTrigger: {
+        trigger: '#services-961',
+        start: 'top 80%',
+    },
+    y: 60,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: 'power2.out'
+});
+
+// Side by Side - Split animation
+gsap.from('#sbs-2283 .cs-image-group', {
+    scrollTrigger: {
+        trigger: '#sbs-2283',
+        start: 'top 75%',
+    },
+    x: -80,
+    opacity: 0,
+    duration: 1,
+    ease: 'power2.out'
+});
+
+gsap.from('#sbs-2283 .cs-content', {
+    scrollTrigger: {
+        trigger: '#sbs-2283',
+        start: 'top 75%',
+    },
+    x: 80,
+    opacity: 0,
+    duration: 1,
+    ease: 'power2.out'
+});
+
+gsap.from('#sbs-2283 .cs-item', {
+    scrollTrigger: {
+        trigger: '#sbs-2283 .cs-card-group',
+        start: 'top 80%',
+    },
+    y: 40,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: 'power2.out'
+});
+
+// Events Section - Slide from sides
+gsap.from('#events-1649 .cs-content', {
+    scrollTrigger: {
+        trigger: '#events-1649',
+        start: 'top 75%',
+    },
+    x: -60,
+    opacity: 0,
+    duration: 0.9,
+    ease: 'power2.out'
+});
+
+gsap.from('#events-1649 .cs-item', {
+    scrollTrigger: {
+        trigger: '#events-1649',
+        start: 'top 75%',
+    },
+    x: 60,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'power2.out'
+});
+
+// Quote Section - Fade and scale
+gsap.from('#quote-1400 .cs-quote-wrapper', {
+    scrollTrigger: {
+        trigger: '#quote-1400',
+        start: 'top 80%',
+    },
+    scale: 0.95,
+    opacity: 0,
+    duration: 1,
+    ease: 'power2.out'
+});
+
+// FAQ Section - Content and images
+gsap.from('#faq-2286 .cs-content', {
+    scrollTrigger: {
+        trigger: '#faq-2286',
+        start: 'top 75%',
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    ease: 'power2.out'
+});
+
+gsap.from('#faq-2286 .cs-faq-item', {
+    scrollTrigger: {
+        trigger: '#faq-2286 .cs-faq-group',
+        start: 'top 80%',
+    },
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.1,
+    ease: 'power2.out'
+});
+
+gsap.from('#faq-2286 .cs-image-group .cs-picture', {
+    scrollTrigger: {
+        trigger: '#faq-2286',
+        start: 'top 75%',
+    },
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.15,
+    ease: 'power2.out'
+});
+
+// CTA Section - Fade and scale
+gsap.from('#cta-52 .cs-content', {
+    scrollTrigger: {
+        trigger: '#cta-52',
+        start: 'top 80%',
+    },
+    scale: 0.96,
+    opacity: 0,
+    duration: 0.9,
+    ease: 'power2.out'
 });
 </script>
 

@@ -1,15 +1,15 @@
 module.exports = {
-    name: "Code Stitch Web Designs",
-    email: "help@codestitch.app",
-    phoneForTel: "555-779-4407",
-    phoneFormatted: "(555) 779-4407",
+    name: "East Brampton Baptist Church",
+    email: "eastbramptonbaptistchurch@gmail.com",
+    phoneForTel: "647-524-0669",
+    phoneFormatted: "(647) 524-0669",
     address: {
         lineOne: "First Address Line",
         lineTwo: "Second Address Line",
-        city: "Denver",
-        state: "CO",
-        zip: "80206",
-        country: "US",
+        city: "Brampton",
+        state: "ON",
+        zip: "L6T 5L3",
+        country: "CA",
         mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
     },
     socials: {

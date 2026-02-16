@@ -350,16 +350,15 @@ html {
         }
 
         &.cs-active {
-    &:after {
-        width: 100%;
-        opacity: 1;
-    }
+            &:after {
+                width: 100%;
+                opacity: 1;
+            }
 
-    .cs-ul-wrapper {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}}
+            .cs-ul-wrapper {
+                transform: translateX(0);
+                opacity: 1;
+            }
 
             .cs-li {
                 transform: translateY(0);
@@ -471,23 +470,23 @@ html {
             border-radius: 8px;
             position: relative;
             z-index: 10001;
-        }
 
-        .cs-active {
-            .cs-line1 {
-                top: 50%;
-                transform: translate(-50%, -50%) rotate(225deg);
-            }
+            &.cs-active {
+                .cs-line1 {
+                    top: 50%;
+                    transform: translate(-50%, -50%) rotate(225deg);
+                }
 
-            .cs-line2 {
-                top: 50%;
-                transform-origin: center;
-                transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
-            }
+                .cs-line2 {
+                    top: 50%;
+                    transform-origin: center;
+                    transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
+                }
 
-            .cs-line3 {
-                bottom: 100%;
-                opacity: 0;
+                .cs-line3 {
+                    bottom: 100%;
+                    opacity: 0;
+                }
             }
         }
 
@@ -651,6 +650,8 @@ html {
         .cs-button-outline {
             display: none;
         }
+    }
+}
     
 
 /*-- -------------------------- -->

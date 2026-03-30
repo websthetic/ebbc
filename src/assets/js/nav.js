@@ -251,3 +251,7 @@
 })();
 
 
+    window.addEventListener('scroll', () => {
+        document.body.classList.toggle('scroll', window.scrollY > 50);
+    });
+

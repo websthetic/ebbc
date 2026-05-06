@@ -1,7 +1,168 @@
 /*-- -------------------------- -->
+<---         Banner           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #banner-anniversary {
+        width: 100%;
+        padding: clamp(2.5rem, 5vw, 3.5rem) (16/16rem);
+        position: relative;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primaryDark) 100%);
+        overflow: hidden;
+ 
+        /* Top accent line */
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--secondary), transparent);
+            opacity: 0.6;
+        }
+ 
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            position: relative;
+            z-index: 1;
+        }
+ 
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: clamp(1.5rem, 3vw, 2rem);
+        }
+ 
+        .cs-text-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+ 
+        .cs-topper {
+            font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+            color: var(--secondary);
+            margin-bottom: (8/16rem);
+        }
+ 
+        .cs-banner-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-family: 'Spectral';
+            font-weight: 700;
+            line-height: 1.2em;
+            color: var(--bodyTextColorWhite);
+            margin: 0 0 (8/16rem) 0;
+        }
+ 
+        .cs-highlight {
+            color: var(--secondary);
+        }
+ 
+        .cs-date {
+            font-size: clamp(0.9375rem, 2vw, 1.125rem);
+            color: var(--bodyTextColorWhite);
+            opacity: 0.85;
+            letter-spacing: 0.05em;
+            margin: 0;
+        }
+ 
+        .cs-countdown {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 3vw, 2rem);
+            flex-wrap: wrap;
+        }
+ 
+        .cs-countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: (70/16rem);
+        }
+ 
+        .cs-countdown-value {
+            font-size: clamp(2.25rem, 5vw, 3.5rem);
+            font-family: 'Spectral';
+            font-weight: 700;
+            color: var(--secondary);
+            line-height: 1;
+            
+        }
+ 
+        .cs-countdown-label {
+            font-size: clamp(0.6875rem, 1.2vw, 0.75rem);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(250, 251, 252, 0.7);
+            margin-top: (8/16rem);
+            font-weight: 500;
+        }
+ 
+        .cs-cta-text {
+            font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+            color: var(--bodyTextColorWhite);
+            opacity: 0.9;
+            max-width: (600/16rem);
+            margin: 0;
+            line-height: 1.5em;
+        }
+    }
+}
+ 
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #banner-anniversary {
+        .cs-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+ 
+        .cs-text-group {
+            align-items: flex-start;
+            flex: 0 0 auto;
+        }
+ 
+        .cs-countdown {
+            flex: 0 0 auto;
+        }
+ 
+        .cs-cta-text {
+            display: none;
+        }
+    }
+}
+ 
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #banner-anniversary {
+        padding: clamp(2.5rem, 4vw, 3rem) (16/16rem);
+ 
+        .cs-countdown-item {
+            min-width: (90/16rem);
+        }
+ 
+        .cs-countdown-value {
+            font-size: 3.5rem;
+        }
+ 
+        &:after {
+            width: 500px;
+            height: 500px;
+            right: -200px;
+        }
+    }
+}
+
+/*-- -------------------------- -->
 <---         Services           -->
 <--- -------------------------- -*/
-
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #services-961 {

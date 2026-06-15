@@ -126,38 +126,37 @@ gsap.from('#banner-anniversary .cs-cta-text', {
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <a class="cs-item-link" href="">
+                <div class="cs-item-link">
                     <span class="cs-time-badge">9:45 AM</span>
                     <img class="cs-icon" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/sunrise-img.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
                     <h3 class="cs-h3">Sunday Morning Service</h3>
                     <p class="cs-item-text">
                         Come join us for our morning service, where we have Sunday school to help us grow spiritually and further our understanding of the Bible. 
                     </p>
-                </a>
+                </div>
             </li>
             <li class="cs-item">
-                <a href="" class="cs-item-link">
+                <div class="cs-item-link">
                     <span class="cs-time-badge">2:00 PM</span>
                     <img class="cs-icon" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/sun-image.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
                     <h3 class="cs-h3">Sunday Afternoon Service</h3>
                     <p class="cs-item-text">
                         Complete the Sunday with the afternoon service as we gather together, praising God and let us grow closer in our relationship with God.
                     </p>
-                </a>
+                </div>
             </li>
             <li class="cs-item">
-                <a href="" class="cs-item-link">
+                <div class="cs-item-link">
                     <span class="cs-time-badge">7:00 PM</span>
                     <img class="cs-icon" src="https://websthetic.tor1.cdn.digitaloceanspaces.com/EBBC/bible-img.svg" alt="" width="40" height="40" loading="lazy" decoding="async" aria-hidden="true">
                     <h3 class="cs-h3">Friday Prayer Meeting</h3>
                     <p class="cs-item-text">
                         Become a prayer warrior and join us every Friday as we come together to lift up those in need in prayer.
                     </p>
-                </a>
+                </div>
             </li>
         </ul>
     </div>
-
 </section>
 
 <!-- ============================================ -->
@@ -302,7 +301,7 @@ gsap.from('#banner-anniversary .cs-cta-text', {
             </div>
         </div>
 
-        <a href="" class="cs-button-solid">Visit Us This Sunday</a>
+        <a href="/contact/" class="cs-button-solid">Visit Us This Sunday</a>
     </div>
 </section>
 
@@ -322,19 +321,9 @@ gsap.from('#banner-anniversary .cs-cta-text', {
     </div>
 </section>
 
-<!-- ============================================ -->
-<!--                     CTA                      -->
-<!-- ============================================ -->
+{% include 'sections/cta.html' %}
 
-<section id="cta-52">
-    <div class="cs-container">
-        <div class="cs-content">
-            <span class="cs-topper">A Place To Call Home</span>
-            <h2 class="cs-title">We all need a church family, and you're more than welcome here.</h2>
-            <a href="" class="cs-button-solid">Join Us This Sunday!</a>
-        </div>
-    </div>
-</section>
+{% include 'components/outreach-disclaimer.html' %}
                                 
                                
 <!-- GSAP Library -->

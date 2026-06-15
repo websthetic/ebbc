@@ -1419,3 +1419,41 @@ html {
 		}
 	}
 }
+
+/*-- -------------------------- -->
+<---       Outreach Disclaimer      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #disclaimer-1402 {
+        padding: clamp(2rem, 4vw, 3rem) 1rem;
+        border-top: 1px solid rgba(28, 44, 53, 0.12);
+
+        .cs-container {
+            width: 100%;
+            max-width: (680/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+        }
+
+        .cs-text {
+            font-size: clamp(0.875rem, 1.5vw, 0.9375rem);
+            color: var(--bodyTextColorMuted);
+            max-width: (640/16rem);
+            margin: auto;
+
+            strong {
+                color: var(--bodyTextColor);
+                font-weight: 600;
+            }
+        }
+    }
+}

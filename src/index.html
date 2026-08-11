@@ -52,67 +52,7 @@ tags: "sitemap" # content/content.json will make sure that all pages in content/
 </div>
 </section>
 
-<!-- ============================================ -->
-<!--         Anniversary Countdown Banner         -->
-<!-- ============================================ -->
-<section id="banner-anniversary">
-    <div class="cs-container">
-        <div class="cs-content">
-            <div class="cs-text-group">
-                <span class="cs-topper">Celebrating God's Faithfulness</span>
-                <h2 class="cs-banner-title">Our <span class="cs-highlight">18th</span> Anniversary</h2>
-                <p class="cs-date">June 7th, 2026</p>
-            </div>
-           
-            <div class="cs-cta-group">
-    <p class="cs-thank-you">Thank you for celebrating 18 years of God's grace with us!</p>
-    <a href="https://drive.google.com/drive/folders/1_afqLT8Kz0HDl18BI542ETkyuMZ4UScT?usp=sharing" class="cs-banner-button" target="_blank" rel="noopener">
-        View Anniversary Photos
-    </a>
-</div>
-        </div>
-    </div>
-</section>
 
-
- 
-<!-- OPTIONAL: GSAP ANIMATION (add to your existing animation script section) -->
-<script>
-// Anniversary Banner Animation
-gsap.from('#banner-anniversary .cs-text-group', {
-    scrollTrigger: {
-        trigger: '#banner-anniversary',
-        start: 'top 85%',
-    },
-    x: -60,
-    opacity: 0,
-    duration: 0.8,
-    ease: 'power2.out'
-});
- 
-gsap.from('#banner-anniversary .cs-countdown-item', {
-    scrollTrigger: {
-        trigger: '#banner-anniversary',
-        start: 'top 85%',
-    },
-    y: 30,
-    opacity: 0,
-    duration: 0.6,
-    stagger: 0.1,
-    ease: 'power2.out'
-});
- 
-gsap.from('#banner-anniversary .cs-cta-text', {
-    scrollTrigger: {
-        trigger: '#banner-anniversary',
-        start: 'top 85%',
-    },
-    opacity: 0,
-    duration: 0.8,
-    delay: 0.4,
-    ease: 'power2.out'
-});
-</script>
 
 <!-- ============================================ -->
 <!--                  Services                    -->
